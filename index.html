@@ -1,0 +1,130 @@
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- Primary SEO -->
+    <title>Emptiness | A Space to Let Things Out</title>
+    <meta name="description" content="A calm, anonymous space for confessions, stories, and letters. Vent your feelings, share secrets without judgment, or create aesthetic notes. No login required.">
+    <meta name="keywords" content="anonymous confessions, venting website, mental health safe space, aesthetic writing templates, online diary, secret sharing, aesthetic notes, digital letters, healing, loneliness, love letters, poetry generator">
+    <meta name="author" content="T.Rex">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://emptiness.app/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://emptiness.app/">
+    <meta property="og:title" content="Emptiness | A Space to Let Things Out">
+    <meta property="og:description" content="A calm, anonymous space for confessions, stories, and letters. Vent your feelings, share secrets without judgment.">
+    <meta property="og:image" content="https://i.postimg.cc/8cbGL0tK/34.png">
+    <meta property="og:site_name" content="Emptiness">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://emptiness.app/">
+    <meta name="twitter:title" content="Emptiness | A Space to Let Things Out">
+    <meta name="twitter:description" content="A calm, anonymous space for confessions, stories, and letters. Vent your feelings, share secrets without judgment.">
+    <meta name="twitter:image" content="https://i.postimg.cc/8cbGL0tK/34.png">
+    <meta name="twitter:creator" content="@7Emptiness">
+
+    <!-- Theme & Icons -->
+    <meta name="theme-color" content="#fff1f2">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/8cbGL0tK/34.png">
+    <link rel="apple-touch-icon" href="https://i.postimg.cc/8cbGL0tK/34.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Allura&family=Amatic+SC:wght@400;700&family=Bad+Script&family=Bodoni+Moda:opsz@6..96&family=Caveat&family=Cedarville+Cursive&family=Cinzel&family=Cookie&family=Cormorant+Garamond:wght@300;400;500;600&family=Courier+Prime&family=Covered+By+Your+Grace&family=Cutive+Mono&family=Dancing+Script:wght@400;700&family=Euphoria+Script&family=Gloria+Hallelujah&family=Great+Vibes&family=Herr+Von+Muellerhoff&family=Homemade+Apple&family=Indie+Flower&family=Italianno&family=Josefin+Sans:wght@300;400&family=Kalam:wght@300;400&family=Kristi&family=La+Belle+Aurore&family=Libre+Bodoni&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Marck+Script&family=Meddon&family=Merienda&family=MonteCarlo&family=Montserrat:wght@300;400&family=Mr+De+Haviland&family=Nanum+Pen+Script&family=Nothing+You+Could+Do&family=Nunito:wght@300;400;600&family=Pacifico&family=Parisienne&family=Patrick+Hand&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@300;400&family=Reenie+Beanie&family=Rochester&family=Sacramento&family=Shadows+Into+Light&family=Special+Elite&family=Tangerine:wght@400;700&family=Tenor+Sans&family=The+Girl+Next+Door&family=Waiting+for+the+Sunrise&family=WindSong&family=Zeyada&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Lora"', 'serif'],
+              sans: ['"Quicksand"', 'sans-serif'],
+              hand: ['"Dancing Script"', 'cursive'],
+              display: ['"Playfair Display"', 'serif'],
+            },
+            colors: {
+              pastel: {
+                pink: '#ffe4e6',
+                rose: '#fff1f2',
+                blue: '#e0f2fe',
+                green: '#dcfce7',
+                purple: '#f3e8ff',
+                yellow: '#fef3c7',
+                orange: '#ffedd5',
+                slate: '#f8fafc',
+                text: '#475569'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #fcfcfc;
+        color: #334155;
+        overscroll-behavior: none;
+      }
+      html {
+        touch-action: manipulation;
+      }
+      /* Hide scrollbar for clean aesthetic but allow scroll */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .fade-in {
+        animation: fadeIn 0.8s ease-in-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+    <script>
+      // Prevent keyboard zoom (Ctrl +/-, Ctrl Scroll)
+      document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+
+      document.addEventListener('wheel', function(e) {
+        if (e.ctrlKey) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+
+      // Prevent pinch zoom via gesture events
+      document.addEventListener('gesturestart', function(e) {
+        e.preventDefault();
+      });
+      document.addEventListener('gesturechange', function(e) {
+        e.preventDefault();
+      }); 
+      document.addEventListener('gestureend', function(e) {
+        e.preventDefault();
+      });
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
